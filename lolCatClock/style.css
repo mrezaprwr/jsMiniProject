@@ -1,0 +1,40 @@
+body{
+  background-color: #E0C39C;
+  color: #343F39;
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+header{
+  font-family:  'Lalezar', cursive;
+  font-size: 2rem;
+  margin: 1.5rem;
+}
+h1{
+  margin: 0;
+  padding: 0;
+}
+h4{
+  font-size: 1.3rem;
+}
+h4 #clock {
+  font-size: 2.2rem;
+}
+img{
+  width: 50%;
+}
+select{
+  padding: 0.6rem;
+}
+#partyTimeButton{
+  padding: 1rem;
+  background-color: 343F39;
+  color: #fff;
+  border: 0px;
+  width: 20rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 1.7rem;
+  border-radius: 4px;
+}
