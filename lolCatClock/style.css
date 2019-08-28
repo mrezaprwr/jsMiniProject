@@ -27,9 +27,13 @@ img{
 select{
   padding: 0.6rem;
 }
+blockquote #timeEvent{
+  font-size: 1.5rem;
+  margin: -55px 0px 90px 0px;
+}
 #partyTimeButton{
   padding: 1rem;
-  background-color: 343F39;
+  background-color: #343F39;
   color: #fff;
   border: 0px;
   width: 20rem;
@@ -37,4 +41,6 @@ select{
   font-weight: 800;
   margin: 1.7rem;
   border-radius: 4px;
+
+  cursor: pointer;
 }
