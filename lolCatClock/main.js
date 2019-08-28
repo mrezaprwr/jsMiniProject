@@ -47,6 +47,10 @@ var updateClock = function () {
     var messageText;
     var image = "https://socialnewsdaily.com/wp-content/uploads/2018/07/rsz_014.jpg";
 
+    var timeEventJS = document.getElementById('timeEvent');
+    var memePhotoJS = document.getElementById('memePhoto');
+
+
     if(time == partytime) {
         image = "";
         messageText = "Let's Parteeyyyyy";
@@ -70,5 +74,62 @@ var updateClock = function () {
         messageText = "Good Afternoon!";
     }
 
-    console.log();
+    console.log(messageText);
+    timeEventJS.innerText = messageText;
+    memePhotoJS.src = image;
+    
+    showCurrentTime();
+};
+updateClock();
+
+/// Getting the clock to increment once a second
+var oneSecond = 1000;
+setInterval(updateClock, oneSecond);
+
+/// Make the Party Time Button Work
+var partyButton = document.getElementById('partyTimeButton');
+
+var partyEvent = function() {
+    if(partytime < 0) {
+        partytime = new Date().getHours();
+        partyButton.innerText = "Party Over!";
+        partyButton.style.backgroundColor = "#D6C3C9";
+    } else {
+        partytime = -1;
+        partyButton.innerText = "Party Time!";
+        partyButton.style.backgroundColor("#343F39");
+    }
+};
+
+/// Click the button to run the function
+partyButton.addEventListener("click", partyEvent);
+partyEvent(); //Unsure about the occurrence
+
+/// Activates Wake-Up selector
+var wakeUpTimeSelector = document.getElementById('wakeUpTimeSelector');
+
+var wakeUpEvent = function() {
+    wakeuptime = wakeUpTimeSelector.value;
+};
+
+wakeUpTimeSelector.addEventListener("change",wakeUpEvent);
+
+/// Activates Lunchtime Selector
+var lunchTimeSelector = document.getElementById('lunchTimeSelector');
+
+var lunchTimeEvent = function() {
+    lunchtime = lunchTimeSelector.value;
 }
+
+lunchTimeSelector.addEventListener("change", lunchTimeEvent);
+
+/// Activates Naptime Selector
+
+var napTimeSelector = document.getElementById('napTimeSelector');
+
+var napTimeEvent = function() {
+    naptime = napTimeSelector.value;
+}
+
+napTimeSelector.addEventListener('change', napTimeEvent);
+
