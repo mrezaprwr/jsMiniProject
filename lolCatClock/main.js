@@ -111,7 +111,7 @@ partyButton.addEventListener("click", partyEvent);
 partyEvent(); //Unsure about the occurrence
 
 /// Activates Wake-Up selector
-var wakeUpTimeSelector = document.getElementById('wakeUpTimeSelector');
+var wakeUpTimeSelector = document.getElementById("wakeUpTimeSelector");
 
 var wakeUpEvent = function() {
     wakeuptime = wakeUpTimeSelector.value;
@@ -120,7 +120,7 @@ var wakeUpEvent = function() {
 wakeUpTimeSelector.addEventListener("change",wakeUpEvent);
 
 /// Activates Lunchtime Selector
-var lunchTimeSelector = document.getElementById('lunchTimeSelector');
+var lunchTimeSelector = document.getElementById("lunchTimeSelector");
 
 var lunchTimeEvent = function() {
     lunchtime = lunchTimeSelector.value;
@@ -130,7 +130,7 @@ lunchTimeSelector.addEventListener("change", lunchTimeEvent);
 
 /// Activates Naptime Selector
 
-var napTimeSelector = document.getElementById('napTimeSelector');
+var napTimeSelector = document.getElementById("napTimeSelector");
 
 var napTimeEvent = function() {
     naptime = napTimeSelector.value;
